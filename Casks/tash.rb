@@ -16,12 +16,12 @@ cask "tash" do
   on_macos do
     on_intel do
       url "https://github.com/renjfk/tash/releases/download/v#{version}/tash_Darwin_x86_64"
-      sha256 "2474a3215f582e69c71ef5267c0990ce706f3a5eb8eb7d07542b2d492b955296"
+      sha256 "4948eb8e38c8849e508c4c4810da9f033e2ace609ce4ec2de1bb2e901c6500bd"
       binary "tash_Darwin_x86_64", target: "tash"
     end
     on_arm do
       url "https://github.com/renjfk/tash/releases/download/v#{version}/tash_Darwin_arm64"
-      sha256 "3d3f3373e70c23ad69da3207c633705ddb3adde0859cc0d69b7642e04225c980"
+      sha256 "a8de2ec80ef75a5ad04e97fd71a0ca905c3a87d1476aff09fdf5dbaadcaaceff"
       binary "tash_Darwin_arm64", target: "tash"
     end
   end
@@ -29,19 +29,13 @@ cask "tash" do
   on_linux do
     on_intel do
       url "https://github.com/renjfk/tash/releases/download/v#{version}/tash_Linux_x86_64"
-      sha256 "bb5b3ae4063ca6bc53933edd874a9679e043a2f3f735656d78971edee040dcd7"
+      sha256 "2848b7e52b1568333f55f41c80f41967e517ce69371ea0255ea490934e0b68c5"
       binary "tash_Linux_x86_64", target: "tash"
     end
     on_arm do
       url "https://github.com/renjfk/tash/releases/download/v#{version}/tash_Linux_arm64"
-      sha256 "21560d25890d48475c54c20b82b1273e5b3a6187c003015258136e791c87314a"
+      sha256 "98503b53714bdff6844d5a7c9fb98d811730813cb3801403606f051f82f2e959"
       binary "tash_Linux_arm64", target: "tash"
-    end
-  end
-
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/tash"]
     end
   end
 
