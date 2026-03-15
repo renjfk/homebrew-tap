@@ -3,7 +3,7 @@ cask "tash" do
   name "tash"
   desc "AI-powered fish shell assistant; type naturally, get commands"
   homepage "https://github.com/renjfk/tash"
-  version "0.6"
+  version "0.7"
 
   livecheck do
     skip "Auto-generated on release."
@@ -16,12 +16,12 @@ cask "tash" do
   on_macos do
     on_intel do
       url "https://github.com/renjfk/tash/releases/download/v#{version}/tash_Darwin_x86_64"
-      sha256 "a15b935d7fb8c478056ef3e7d29782ee8912b0dafc3793f9d91bc0f77b480064"
+      sha256 "bcbb4df5fab65ade249f14f2d3a807c319cc8e58465a5ad791656adddcacb3ba"
       binary "tash_Darwin_x86_64", target: "tash"
     end
     on_arm do
       url "https://github.com/renjfk/tash/releases/download/v#{version}/tash_Darwin_arm64"
-      sha256 "a758b40bc065637021f39b78f1b7a582a670f5693b634e0273912336901b74cd"
+      sha256 "13d3f96d2d03be01647e9a7f152e3c09488c94e1715706926bed2159d1184286"
       binary "tash_Darwin_arm64", target: "tash"
     end
   end
@@ -29,12 +29,12 @@ cask "tash" do
   on_linux do
     on_intel do
       url "https://github.com/renjfk/tash/releases/download/v#{version}/tash_Linux_x86_64"
-      sha256 "c3219d4e7b5b1ae3d270f19b069c6ce9416844b4864a4f1fb39a636049a1ac6e"
+      sha256 "edb7cd1128959befdeececc99cb19f36ba495a209f00922ec89b038127ffbbc6"
       binary "tash_Linux_x86_64", target: "tash"
     end
     on_arm do
       url "https://github.com/renjfk/tash/releases/download/v#{version}/tash_Linux_arm64"
-      sha256 "042ea3ebf30a3bb57b6e7a3e0bf39a2cd19031eb6312d2f21dd512dce40dba70"
+      sha256 "71691539fb0458b13094d08474e573264f7e10c855d4740620b610deddf317ac"
       binary "tash_Linux_arm64", target: "tash"
     end
   end
